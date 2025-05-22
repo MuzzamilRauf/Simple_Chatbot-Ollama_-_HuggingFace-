@@ -4,6 +4,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.schema.runnable import RunnableLambda
 from langchain import HuggingFaceHub
 from langchain.memory import ConversationBufferMemory
+from config import hf_api_token
 import re
 import os
 
@@ -82,10 +83,10 @@ class Chatbot:
 # Chatbot when we are accessing the model from Huggingface
 
 from huggingface_hub import login
-login("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")
+login(hf_api_token)
 
 # Set your Hugging Face API token
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = hf_api_token
 
 class AIChatbot:
     def __init__(self, model_name):
