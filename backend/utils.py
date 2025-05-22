@@ -82,10 +82,10 @@ class Chatbot:
 # Chatbot when we are accessing the model from Huggingface
 
 from huggingface_hub import login
-login("use your own token")
+login("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")
 
 # Set your Hugging Face API token
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "use your own token"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 
 class AIChatbot:
     def __init__(self, model_name):

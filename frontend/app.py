@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Set the FastAPI URL
-API_URL = "http://127.0.0.1:8080/chats"
+API_URL = "http://backend-container:8080/chats"
 
 # Initialize session state for chat history
 if "chat_history" not in st.session_state:

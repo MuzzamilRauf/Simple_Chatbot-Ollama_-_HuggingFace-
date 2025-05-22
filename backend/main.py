@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-# from backend.utils import Chatbot
-from backend.utils import AIChatbot
-from backend.config import MODEL_NAME, hf_model_name
+# from utils import Chatbot
+from utils import AIChatbot
+from config import MODEL_NAME, hf_model_name
 from concurrent.futures import ThreadPoolExecutor
 import uvicorn
 import logging
@@ -50,4 +50,4 @@ async def chat(request: QueryRequest):  # Accepting QueryRequest model
     return {"response": last_response}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=8080)
